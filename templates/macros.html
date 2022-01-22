@@ -1,0 +1,11 @@
+{% macro navbar(menu) %}
+<nav>
+    <div id="navContent">
+            {% for objmenu in menu %}
+                <a class="objmenu" href="{{ objmenu[1] }}" onclick="ir('{{ objmenu }}')">
+                    {{ objmenu[0] }}
+                </a>
+            {% endfor %}
+    </div>
+</nav>
+{% endmacro %}

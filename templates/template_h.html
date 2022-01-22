@@ -1,0 +1,22 @@
+{% import 'contenido1.html' as c1 %}
+{% import 'contenido2.html' as c2 %}
+{% import 'contenido3.html' as c3 %}
+{% import 'contenido4.html' as c4 %}
+{% macro pr_style(bordercolor,planetcolor,interncolor,wmenu) %}
+<style>
+html{
+    --main-bordercolor: {{ bordercolor }};
+    --main-planetcolor: {{ planetcolor }};
+    --main-interncolor: {{ interncolor }};
+    --an_objmenu: {{ wmenu }};
+}
+</style>
+{% endmacro %}
+
+
+{% macro content() %}
+    {{ c1.cont() }}
+    {{ c2.cont() }}
+    {{ c3.cont() }}
+    {{ c4.cont() }}
+{% endmacro %}

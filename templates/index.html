@@ -1,0 +1,15 @@
+{% import 'template_h.html' as temp %}
+{% import 'macros.html' as macro %}
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block pr_style %}
+    {{ temp.pr_style(bordercolor,planetcolor,interncolor,wmenu) }}
+{% endblock %}
+{% block menu %}
+    {{ macro.navbar(menu) }}
+{% endblock %}
+{% block content %}
+    {{ temp.content() }}
+{% endblock %}
+
+

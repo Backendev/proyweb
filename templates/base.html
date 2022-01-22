@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<!--<ATENCION> SI ABRES LAS DEV TOOLS POR FAVOR SELECCIONAR EL DOCK SIDE EN -VENTANA SEPARADA- </ATENCION>-->
+<html lang="en" resize="tam_screen()">
+{% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}Base Page {% endblock %}
+    </title>
+    {% block pr_style %}
+    {% endblock %}
+    <div id="aditionalStyle"></div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link id="st" rel="stylesheet" href="{{ url_for('static', filename='css/main.css?ABCDEF12345sessionID') }} " /> -->
+  <link id="st"  rel='stylesheet' href="{{ url_for('static', filename='css/main.css') }} " > 
+   <script>
+       var hei = 0
+       var wi = 0
+       var x_ant = 0
+   </script>
+    <script>
+        $(window).resize(function(){
+            tam_screen()
+        })
+        function tam_screen(){
+            wi = window.innerWidth
+            hei = window.innerHeight
+            //alert(String(wi) + " -  "+String(hei))
+            document.getElementById('aditionalStyle').innerHTML="<style>html{--main-width: "+wi+"px;--main-height:"+hei+"px;}</style>";
+            document.getElementById('st').href= "{{ url_for('static', filename='css/main.css') }} ";
+        }
+        tam_screen()
+    </script>
+    <script>
+        function ir(ob){
+            $.getJSON('/pet', {
+                //Valores para peticion GET
+                option: ob
+                //Funcion al retornar valores
+            }, function(data) {
+                ar_data = Array.from(data)
+                //Render de datos en Elemento del DOM
+                $("#respuesta").text(
+                    data['option']
+                    );
+            });
+        }
+    </script>
+{% endblock %}
+<script src="{{ url_for('static', filename='js/lib.js') }} ">
+    
+</script>
+<body onscroll="mov(window.scrollY)">
+<div id="contenedor" >
+    {% block menu %}
+    {% endblock %}
+    <div id="respuesta"></div>
+    {% block content %}
+    {% endblock %}
+</div>
+    
+
+<div id="footContent"></div>
+</body>
+
+</html>

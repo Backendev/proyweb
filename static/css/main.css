@@ -1,0 +1,243 @@
+body{
+    padding:0px;
+    margin: auto;
+    background-color: var(--main-bordercolor);
+    width: calc(var(--main-width) * 0.97);
+}
+.objmenu{
+    width: var(--an_objmenu);
+    text-align: center;
+}
+#navContent{
+    width: calc(var(--main-width) * 0.97);
+    height: calc(var(--main-height) * 0.05);
+    display:flex;
+    position: fixed;
+    background-color: var(--main-bordercolor);
+    z-index: 33;
+}
+#respuesta{
+    width: calc(var(--main-width) * 0.97);
+    height: calc(var(--main-height) * 0.05);
+    top: calc(var(--main-height) * 0.05);
+    position: fixed;
+    z-index: 33;
+    text-align: center;
+
+}
+#contenedor{
+    width: 100%;
+    overflow: hidden;
+}
+#contenido_uno{
+    width: calc(var(--main-width) * 0.97);
+    height: var(--main-height);
+    background-color: #c1d1e1;
+    /*top: calc(var(--main-height) * 0.10);*/
+    position: relative;
+    overflow: hidden;
+}
+#contenido_dos{
+    width: calc(var(--main-width) * 0.97);
+    height: calc(var(--main-height));
+    background-color:var(--main-planetcolor);
+    /*top: calc(var(--main-height) * 0.10);*/
+    position: relative;
+}
+#contenido_tres{
+    width: calc(var(--main-width) * 0.97);
+    height: calc(var(--main-height));
+    background-color:var(--main-interncolor);
+    /*top: calc(var(--main-height) * 0.10);*/
+    position: relative;
+}
+#contenido_cuatro{
+    width: calc(var(--main-width) * 0.97);
+    height: calc(var(--main-height)*0.90);
+    background-color:var(--main-interncolor);
+    /*top: calc(var(--main-height) * 0.10);*/
+    position: relative;
+}
+#footContent{
+    width: calc(var(--main-width) * 0.97);
+    height: calc(var(--main-height) * 0.05);
+    display:flex;
+    position: fixed;
+    background-color: var(--main-bordercolor);
+    bottom: 0px;
+    z-index: 33;
+}
+#planet{
+    background-color:var(--main-bordercolor);
+    border:1px var(--main-planetcolor) solid;
+}
+#mountaina{
+    /* background-image: url("../images/bosque.svg"); */
+    background-size:100% 100%;
+    background-attachment: local;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+}
+#mountainb{
+    /* background-image: url("../images/bosque.svg"); */
+    background-size:100% 100%;
+    background-attachment: local;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+}
+#mountainc{
+    background-image: url("../images/montain2.svg");
+    background-size:100% 100%;
+    background-attachment: local;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+}
+#mountaind{
+    background-image: url("../images/montain.svg");
+    background-size: 100% 100%;
+    background-attachment: local;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+}
+#mountaine{
+    
+}
+#mountainf{
+    
+}
+#edificio1{
+    background-image: url("../images/ciudade3.svg");
+    background-size: 100% 100%;
+    background-attachment: local;
+    
+    background-repeat: no-repeat;
+}
+#edificio2{
+    background-image: url("../images/ciudade3.svg");
+    background-size: 100% 100%;
+    background-attachment: local;
+    background-position: bottom -50px right 7px;
+    background-repeat: no-repeat;
+}
+#edificio3{
+    background-image: url("../images/ciudad1.svg");
+    background-size: contain;
+    background-attachment: local;
+    background-position: center;
+    background-repeat: repeat-x;
+}
+#edificio4{
+    background-image: url("../images/muro.svg");
+    background-size: contain;
+    background-attachment: local;
+    background-position: center;
+    background-repeat: repeat-x;
+    width: calc(var(--main-width) * 0.30);
+    height: calc(var(--main-height) * 0.05);
+}
+#edificio5{
+    background-color:black;
+    width: calc(var(--main-width) * 0.60);
+    height: calc(var(--main-height) * 0.95);
+}
+#ciudade3{
+    cursor: crosshair;
+}
+#pantalla{
+    height: calc(var(--main-height) * 0.70);
+    background-color:#102030;
+    border-radius: 5%;
+}
+#tablero{
+    margin: auto;
+    border-radius: 5%;
+    width: 90%;
+    height: calc(var(--main-height) * 0.18);
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-rows: 1fr 4fr;
+        /*grid-gap: 10px;*/
+        background-color: #102030;
+        /*padding: 10px;*/
+        transform: perspective(4cm) rotateX(10deg) rotateY(0deg);
+}
+#tablero>div{
+font-size: 10px;
+}
+#b2{
+    grid-row-start:1;
+    grid-row-end:4;
+    grid-column-start: 2;
+    grid-column-end:3;
+}
+.boton1{
+    height: 150%;
+    margin: 2%;
+    clip-path: polygon(30% 0%, 100% 0, 100% 30%, 100% 100%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    background-color: #405060;
+    box-shadow: inset -10px -10px 20px #103040;
+}
+.boton2{
+    margin: 2%;
+    clip-path: polygon(0 0, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 0 100%, 0% 70%, 0% 30%);
+    background-color: #405060;
+    box-shadow: inset -10px -10px 20px #103040;
+}
+#texto3{
+border:1px darkkhaki solid;
+z-index: 99;
+width: 30%;
+position: absolute;
+right: 0;
+height: 100%;
+}
+#texto4{
+    border:1px darkkhaki solid;
+    z-index: 99;
+    width: 30%;
+    position: absolute;
+    left: 0;
+    height: 100%;
+}
+
+#texto5{
+    border:1px salmon solid;
+    z-index: 99;
+    width: 30%;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    }
+    #texto6{
+        border:1px salmon solid;
+        z-index: 99;
+        width: 30%;
+        position: absolute;
+        left: 0;
+        height: 100%;
+    }
+    #texto7{
+        border:1px red solid;
+        z-index: 99;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        height: 100%;
+    }
+    
+    #texto8{
+        border:1px greenyellow solid;
+        z-index: 99;
+        width: 100%;
+        position: absolute;
+        right: 0;
+        height: 100%;
+        }
+        #texto9{
+            border:1px blueviolet solid;
+            z-index: 99;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            height: 100%;
+        }

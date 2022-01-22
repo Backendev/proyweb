@@ -1,0 +1,21 @@
+{% macro cont() %}
+<div id="contenido_dos">
+    <div style="z-index:43;">
+        222222
+    </div>
+    <div id="mountaina" style="width: 30%;border-radius: 50%;right:0%;z-index:23;position:absolute;height: 30%;"></div>
+    <div id="mountainb" style="width: 30%;border-radius: 50%;left:0%;z-index:23;position:absolute;height: 30%;"></div>
+    <div id="mountainc" style="width: 30%;right:0%;z-index:25;position:absolute;height: 100%;">
+        <div id="texto3"></div>
+    </div>
+    <div id="mountaind" style="width: 30%;left:0%;z-index:25;position:absolute;height: 100%;">
+        <div id="texto4"></div>
+    </div>
+    <div ><img id="mountaine" style="width: 30%;right:0%;z-index:25;position:absolute;height: 100%;top:35%" src={{url_for('static', filename='images/mountain4.svg') }} alt="insertar SVG con la etiqueta image"> 
+        <div id="texto5"></div>
+    </div>
+    <div ><img id="mountainf" style="width: 30%;left:0%;z-index:25;position:absolute;height: 100%;top:35%" src={{url_for('static', filename='images/mountain3.svg') }} alt="insertar SVG con la etiqueta image"> 
+        <div id="texto6"></div>
+    </div>
+</div>
+{% endmacro %}
